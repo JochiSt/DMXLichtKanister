@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<EmBitz_project_file>
+	<EmBitzVersion release="1.00" revision="0" />
+	<FileVersion major="1" minor="0" />
+	<Project>
+		<Option title="JUNO Dummy Electroncis" />
+		<Option pch_mode="2" />
+		<Option compiler="avrgcc" />
+		<Build>
+			<Target title="Release">
+				<Option output="bin\Release\JUNO Magnetometer Readout.elf" />
+				<Option object_output="obj\Release\" />
+				<Option type="0" />
+				<Option create_hex="1" />
+				<Option compiler="avrgcc" />
+				<Device>
+					<Add option="$device=atmega8" />
+				</Device>
+				<Compiler>
+					<Add option="-fdata-sections" />
+					<Add option="-ffunction-sections" />
+					<Add option="-O2" />
+					<Add option="-g2" />
+				</Compiler>
+				<Linker>
+					<Add option="-Wl,--gc-sections" />
+				</Linker>
+				<Environment>
+					<Variable name="F_CPU" value="14745600" />
+				</Environment>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+		</Compiler>
+		<Unit filename="config.h" />
+		<Unit filename="global.h" />
+		<Unit filename="i2cmaster.h" />
+		<Unit filename="i2cmaster.S">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="main.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="usart.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="usart.h" />
+		<Extensions>
+			<code_completion />
+			<debugger />
+			<envvars />
+		</Extensions>
+	</Project>
+</EmBitz_project_file>
